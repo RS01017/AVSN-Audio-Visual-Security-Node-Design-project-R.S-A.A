@@ -78,7 +78,9 @@ The design features a direct-drive logic circuit with critical safety implementa
 
 * **Current Limiting:** 220$\Omega$ resistors are placed in series with visual indicators to limit current draw to safe GPIO levels (<20mA).
 * **Pull-Down Resistors:** Integrated on sensor inputs to prevent floating voltage states and false alarms.
-
+<img width="859" height="525" alt="image" src="https://github.com/user-attachments/assets/a2364013-e9c8-4203-bd81-40bc0c70d25a" />
+<img width="858" height="537" alt="image" src="https://github.com/user-attachments/assets/fab9e6ae-efe2-4257-a457-4aa3f8a4c396" />
+https://drive.google.com/drive/folders/1OL8Uf6hnze_6QArXATEO9LY6b6vk-hCV?usp=sharing
 ### PCB Design (KiCad)
 
 The PCB for Prototype II is designed as a custom **Arduino Uno Shield**.
