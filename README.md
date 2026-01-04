@@ -38,6 +38,8 @@ Prototype I was designed as a standalone IoT unit powered by the **ESP32 microco
 
 ### Theoretical Framework & Circuit Analysis
 
+<img width="1439" height="851" alt="image" src="https://github.com/user-attachments/assets/470ba1b7-e479-46b4-89aa-622c8ce005f2" />
+
 The core of this design utilizes a **Discrete Darlington Pair configuration** using dual 2N3904 NPN transistors.
 
 * **Current Gain ():** By cascading two transistors, the system achieves a total current gain of . This allows the low-current GPIO of the ESP32 to drive heavy loads without thermal stress.
