@@ -72,7 +72,8 @@ This prototype employs a "Dual-System" architecture:
 
 ### Electrical Schematic
 
-<img width="864" height="866" alt="image" src="https://github.com/user-attachments/assets/1a9f639e-c00a-43d2-8f50-ebd280f26d9c" />
+<img width="834" height="872" alt="image" src="https://github.com/user-attachments/assets/551f0780-0539-4d52-a609-c01f510957b1" />
+
 
 The design features a direct-drive logic circuit with critical safety implementations:
 
