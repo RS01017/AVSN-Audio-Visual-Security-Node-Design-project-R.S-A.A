@@ -74,7 +74,7 @@ This prototype employs a "Dual-System" architecture:
 
 <img width="998" height="942" alt="image" src="https://github.com/user-attachments/assets/02d175f8-d65b-4a91-bfb0-fd1bb2279149" />
 
-
+<img width="786" height="793" alt="image" src="https://github.com/user-attachments/assets/7176c70d-1cda-4f81-9759-cfa2e531551f" />
 
 The design features a direct-drive logic circuit with critical safety implementations:
 
@@ -85,6 +85,9 @@ The design features a direct-drive logic circuit with critical safety implementa
 https://drive.google.com/drive/folders/1OL8Uf6hnze_6QArXATEO9LY6b6vk-hCV?usp=sharing
 
 ### PCB Design (KiCad)
+
+<img width="707" height="547" alt="image" src="https://github.com/user-attachments/assets/c72df68f-1a3d-4e22-a88b-ebe7ccee4763" />
+
 
 The PCB for Prototype II is designed as a custom **Arduino Uno Shield**.
 
