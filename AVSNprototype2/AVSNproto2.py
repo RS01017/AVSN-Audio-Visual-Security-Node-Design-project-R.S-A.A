@@ -1,9 +1,10 @@
-import cv2
-import serial
-import time
-import threading
-import datetime
-import os
+import cv2          # OpenCV: The computer vision library. Handles video and images.
+import serial       # PySerial: Allows Python to talk to USB devices (Arduino).
+import time         # Handles delays (sleep) and measuring current time.
+import threading    # Allows running two tasks at once (Listening & Watching).
+import datetime     # Used to create unique filenames (e.g., "2026-01-05").
+import os           # Operating System tools (used to find where files are saved).
+
 
 # 1. Your Arduino Port (e.g., 'COM3' on Windows, check device manager to see which com port the microcontroller is connected)
 ARDUINO_PORT = 'COM3' 
@@ -17,9 +18,11 @@ print("--- AVSN SECURITY SYSTEM INITIALIZING ---")
 # 1. CONNECT TO ARDUINO
 try:
     arduino = serial.Serial(ARDUINO_PORT, 115200, timeout=1)
+    # Arduino resets when Serial opens. We wait 2 seconds for it to wake up.
     time.sleep(2) # Give Arduino time to reset
     print(f"[SUCCESS] Connected to Arduino on {ARDUINO_PORT}")
 except Exception as e:
+    # If the cable is unplugged or port is wrong, the program crashes here gracefully.
     print(f"[ERROR] Could not connect to Arduino: {e}")
     print("Check your cable and make sure the Port is correct!")
     exit()
@@ -27,6 +30,8 @@ except Exception as e:
 # 2. CONNECT TO esp32 CAMERA
 print(f"[INFO] Connecting to Camera at {CAM_URL}...")
 cap = cv2.VideoCapture(CAM_URL)
+
+# Safety check: Did we actually get a connection?
 
 if not cap.isOpened():
     print("[ERROR] Could not connect to ESP32-CAM stream.")
@@ -50,7 +55,8 @@ def read_serial():
                     print(f"[ARDUINO SAYS]: {line}")
         except:
             pass
-
+# Start the thread in "Daemon" mode.
+# Daemon means "If the main program closes, kill this thread automatically."
 # Start the listener thread
 serial_thread = threading.Thread(target=read_serial, daemon=True)
 serial_thread.start()
