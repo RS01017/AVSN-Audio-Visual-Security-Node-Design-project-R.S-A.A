@@ -1,23 +1,25 @@
-/*
- * Project: AVSN - Arduino Uno Controller
- * Setup: Direct Drive LEDs (Pins 3,5), Buzzer (Pin 8), Sound (A0), I2C LCD
- */
 
+// Setup: basic LEDs (Pins 3,5), Buzzer (Pin 8), Sound (A0), I2C LCD
+
+//Download liquidcrystal library 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 
-// --- PIN MAPPING ---
+// PIN MAPPING 
 #define PIN_SOUND   A0
-#define PIN_RED_LED 3   // Connect via Resistor!
-#define PIN_BLUE_LED 5  // Connect via Resistor!
+#define PIN_RED_LED 3  
+#define PIN_BLUE_LED 5  
 #define PIN_BUZZER  8
 
+//LED have a resistor connected in the anode via a microcontroller pin
+
 // --- CONFIGURATION ---
-// Sensitivity: Lower this number (e.g., 400) to make it trigger easier. Worked best at 1000 for me.
+// Sensitivity: Lower this number (e.g., 400) to make it trigger easier. Worked best at 1000 for me(Play around with).
 const int SOUND_THRESHOLD = 1000; 
-const long ALARM_DURATION = 4000; // How long the alarm lasts (ms)
+const long ALARM_DURATION = 4000; // How long the alarm lasts (ms), change as you wish. 
 
 // --- OBJECTS & VARIABLES ---
+//Must find lcd specifications (my module was 0x27)
 LiquidCrystal_I2C lcd(0x27, 16, 2); 
 
 bool isAlarmActive = false;
