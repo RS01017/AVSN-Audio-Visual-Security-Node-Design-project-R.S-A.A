@@ -26,9 +26,9 @@ This project simulates a real-world R&D environment by analyzing and implementin
 
 **Hardware & Components**
 
-* **Microcontrollers:** ESP32 (Prototype I), Arduino Uno R3 (Prototype II), ESP32-CAM.
+* **Microcontrollers:** ESP32 (Prototype I), Arduino Uno R3 (Prototype II), ESP32-CAM CH340 USB-to-Serial Programmer (Camera Shield).
 * **Analog Electronics:** NPN BJT Transistors (2N3904), Discrete Darlington Pairs, Flyback Diodes (1N4148).
-* **Sensors & Actuators:** KY-038 Electret Microphone, I2C LCD (16x2), Piezo Buzzers, High-Output LEDs.
+* **Sensors & Actuators:** KY-038 Sound sensor, I2C LCD (16x2), Piezo Buzzers, High-Output LEDs and regular LEDs.
 
 ## Prototype I: High-Power ESP32 Architecture
 
