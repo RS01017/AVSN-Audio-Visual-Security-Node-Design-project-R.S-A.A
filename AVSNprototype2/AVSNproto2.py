@@ -5,15 +5,12 @@ import threading
 import datetime
 import os
 
-# --- ⚙️ CONFIGURATION (EDIT THESE 2 LINES) ⚙️ ---
-# 1. Your Arduino Port (e.g., 'COM3' on Windows, '/dev/ttyUSB0' on Mac)
+# 1. Your Arduino Port (e.g., 'COM3' on Windows, check device manager to see which com port the microcontroller is connected)
 ARDUINO_PORT = 'COM3' 
 
-# 2. Your ESP32-CAM IP Address
+# 2. Your ESP32-CAM IP Address (Fetch from esp32 example code, my camera was AIthinker module!)
 # IMPORTANT: Keep the ":81/stream" at the end!
 CAM_URL = 'http://10.0.0.181:81/stream' 
-
-# -------------------------------------------------
 
 print("--- AVSN SECURITY SYSTEM INITIALIZING ---")
 
@@ -27,7 +24,7 @@ except Exception as e:
     print("Check your cable and make sure the Port is correct!")
     exit()
 
-# 2. CONNECT TO CAMERA
+# 2. CONNECT TO esp32 CAMERA
 print(f"[INFO] Connecting to Camera at {CAM_URL}...")
 cap = cv2.VideoCapture(CAM_URL)
 
